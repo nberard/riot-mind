@@ -1,10 +1,8 @@
-FROM ubuntu:20.04
-
-RUN apt-get update && apt-get install -y python3 python3-pip
-
-RUN pip install flask 
-RUN pip install pyot
-
-COPY app.py /opt/
-
-ENTRYPOINT FLASK_APP=/opt/app.py flask run --host=0.0.0.0 --port=8080
+FROM ubuntu:latest
+RUN apt-get update -y
+RUN apt-get install -y python-pip python-dev build-essential
+COPY . /app
+WORKDIR /app
+RUN pip install -r /app/requirements.txt
+ENTRYPOINT ["python"]
+CMD ["app.py"]
