@@ -1,38 +1,28 @@
-from flask import Flask
-from flask_jwt import JWT
-from flask_restful import Api
+import os
 
-from security import authenticate, identity
-from resources.user import UserRegister
-from resources.item import Item, ItemList
-from resources.store import Store, StoreList
+from flask import Flask, render_template
 
-
-'''This is section 4 app.py file.'''
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.secret_key = 'secret'
-api = Api(app)
+@app.route("/")
+def index():
+    if not os.getenv('api_key'):
+        exit('You must set an API key')
+    api_key = os.getenv('api_key')
+    import requests
+    response = requests.get(f"https://europe.api.riotgames.com/riot/account/v1/accounts/by-riot-id/Touplitoui/euw?api_key={api_key}")
+    response.raise_for_status()
+    data = response.json()
+    puuid = data['puuid']
+    summoner = data['gameName']
+    tagLine = data['tagLine']
+
+    #print(data)
+    response = requests.get(f"https://euw1.api.riotgames.com/lol/league/v4/entries/by-puuid/{puuid}?api_key={api_key}")
+    response.raise_for_status()
+    data = response.json()
+    print(data)
 
 
-@app.before_first_request
-def create_tables():
-    db.create_all()
 
-
-# Adding /auth end point:
-jwt = JWT(app, authenticate, identity)
-
-api.add_resource(Store, '/store/<string:name>')
-api.add_resource(Item, '/item/<string:name>')
-api.add_resource(ItemList, '/items')
-api.add_resource(StoreList, '/stores')
-api.add_resource(UserRegister, '/register')
-
-
-# Name is only set to main when file is explicitly run (not on imports):
 if __name__ == '__main__':
-    from db import db
-#    db.init_app(app)
-    app.run(port=5000, debug=True)
+    app.run(debug=True, host='127.0.0.1', port=5000)
