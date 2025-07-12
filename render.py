@@ -2,7 +2,7 @@ import json
 import os
 
 basedir = os.path.dirname(__file__)
-with open(os.path.join(basedir, 'input/full_profile.json', 'r')) as fp:
+with open(os.path.join(basedir, 'input', 'full_profile.json', 'r')) as fp:
     profile = json.loads(fp.read())
     with open(os.path.join(basedir, 'profile.template.html', 'r')) as pt:
         data: str = pt.read()

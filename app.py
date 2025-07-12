@@ -18,7 +18,7 @@ response = requests.get(f"https://euw1.api.riotgames.com/lol/league/v4/entries/b
 response.raise_for_status()
 data = response.json()
 all_profile = data[0]
-with open(os.path.join(basedir, 'profile.json'), 'w') as f:
+with open(os.path.join(basedir, 'output', 'profile.json'), 'w') as f:
     f.write(json.dumps(all_profile, indent=4))
 
 response = requests.get(f"https://europe.api.riotgames.com/lol/match/v5/matches/by-puuid/U24j2Os2QScUGZavBTv372sT8xakJ2qoaFRKwu9AG_4JZcZdS-kzz5idWBRK5N-ScHlg79Rxm8mrxA/ids?startTime=1751040301&endTime=1752045301&type=ranked&start=0&count=20&api_key=RGAPI-b531cd54-f50f-4a8c-8f1c-61cab1856836")
@@ -55,7 +55,7 @@ for match in data[:5]:
     print(game_info)
     all_profile['history'].append(game_info)
 
-with open(os.path.join(basedir, 'output/full_profile.json'), 'w') as f:
+with open(os.path.join(basedir, 'output', 'full_profile.json'), 'w') as f:
     f.write(json.dumps(all_profile, indent=4))
 
 # for match in all_profile['history']:
