@@ -55,7 +55,7 @@ for match in data[:5]:
     print(game_info)
     all_profile['history'].append(game_info)
 
-with open(os.path.join(basedir, 'full_profile.json'), 'w') as f:
+with open(os.path.join(basedir, 'output/full_profile.json'), 'w') as f:
     f.write(json.dumps(all_profile, indent=4))
 
 # for match in all_profile['history']:

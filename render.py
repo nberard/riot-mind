@@ -2,7 +2,7 @@ import json
 import os
 
 basedir = os.path.dirname(__file__)
-with open(os.path.join(basedir, 'full_profile.json', 'r')) as fp:
+with open(os.path.join(basedir, 'input/full_profile.json', 'r')) as fp:
     profile = json.loads(fp.read())
     with open(os.path.join(basedir, 'profile.template.html', 'r')) as pt:
         data: str = pt.read()
@@ -10,7 +10,7 @@ with open(os.path.join(basedir, 'full_profile.json', 'r')) as fp:
                           rankFull=profile['tier'] + " " + profile['rank'], gameNumber=4,
                           champion1='Zoe', nbKills=1, nbDeaths=1, nbAssists=1,kda=1, lp=profile['leaguePoints']
                           )
-        with open(os.path.join(basedir, 'res.html'), 'w') as rp:
+        with open(os.path.join(basedir, 'output/res.html'), 'w') as rp:
             rp.write(res)
 
 
