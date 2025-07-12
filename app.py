@@ -13,6 +13,7 @@ puuid = data['puuid']
 summoner = data['gameName']
 tagLine = data['tagLine']
 basedir = os.path.dirname(__file__)
+print("basedir = {}".format(basedir))
 response = requests.get(f"https://euw1.api.riotgames.com/lol/league/v4/entries/by-puuid/{puuid}?api_key={api_key}")
 response.raise_for_status()
 data = response.json()
