@@ -2,9 +2,11 @@ import json
 import os
 
 basedir = os.path.dirname(__file__)
-with open(os.path.join(basedir, 'input', 'full_profile.json', 'r')) as fp:
+print(basedir)
+print(os.listdir(basedir))
+with open(os.path.join(basedir, 'input_profile.json'), 'r') as fp:
     profile = json.loads(fp.read())
-    with open(os.path.join(basedir, 'profile.template.html', 'r')) as pt:
+    with open(os.path.join(basedir, 'profile.template.html'), 'r') as pt:
         data: str = pt.read()
         res = data.format(rank=profile['tier'].lower(), name="Touplitoui", platform="EUW",
                           rankFull=profile['tier'] + " " + profile['rank'], gameNumber=4,
