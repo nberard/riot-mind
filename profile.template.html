@@ -22,29 +22,9 @@
 </div>
 <div>
     <div>Season W/L</div>
-    <div><span class="text-green-500">293</span><span
-            class="text-white/40">-</span><span class="text-red-500">384</span></div>
-    <div class="text-xs font-medium text-red-500">43.0%</div>
-</div>
-<div class="mt-2 bg-white/5 p-2 rounded">
-    <div class="grid grid-cols-3 gap-2 text-xs">
-        <div class="flex flex-col items-center">
-            <div class="text-white/60 mb-1">Recent {gameNumber} Games</div>
-            <div class="flex items-center gap-1 font-mono font-bold"><span class="text-green-500">4W</span><span
-                    class="text-white/40">-</span><span class="text-red-500">2L</span><span
-                    class="text-xs font-medium text-white/60">(50%)</span></div>
-        </div>
-        <div class="flex flex-col items-center">
-            <div class="text-white/60 mb-1">K/D/A</div>
-            <div class="flex items-center gap-0.5 font-mono font-bold"><span>{nbKills}</span><span
-                    class="text-white/40">/</span><span class="text-red-500">{nbDeaths}</span><span
-                    class="text-white/40">/</span><span>{nbAssists}</span></div>
-        </div>
-        <div class="flex flex-col items-center">
-            <div class="text-white/60 mb-1">K/D/A Avg.</div>
-            <div class="font-bold font-mono">{kda}:1</div>
-        </div>
-    </div>
+    <div><span class="text-green-500">{seasonWins}</span><span
+            class="text-white/40">-</span><span class="text-red-500">{seasonLosses}</span></div>
+    <div class="text-xs font-medium text-red-500">{seasonWinrate}%</div>
 </div>
 <div class="grid grid-cols-10 items-center gap-2">
     <div class="relative size-full max-h-[2.05rem] overflow-hidden border-2 cursor-help border-red-500"
@@ -52,6 +32,21 @@
             src="https://opgg-static.akamaized.net/meta/images/lol/15.13.1/champion/{champion1}.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&amp;v=1508"
             alt="Zoe" class="size-full object-cover"></div>
 </div>
+
+
+<div class="flex w-full items-center justify-between">
+    <div class="flex flex-1 items-center gap-4">
+        <img alt="" loading="lazy" width="72" height="72" decoding="async" data-nimg="1"
+             class="basis-[72px] rounded-full bg-gray-100"
+             src="https://opgg-static.akamaized.net/images/medals_new/{rank}.png?image=q_auto:good,f_webp,w_144&amp;v=1752223483"
+             style="color: transparent;">
+        <div class="flex flex-col gap-0.5"><strong class="text-xl first-letter:uppercase">{rankFull}</strong><span
+                class="text-xs text-gray-500">{lp} LP</span></div>
+    </div>
+    <div class="flex flex-col gap-0.5 text-right text-xs text-gray-400"><span
+            class="leading-[26px]">{wins}W {losses}L</span><span>Win rate {winrate}%</span></div>
+</div>
+
 
 </body>
 </html>

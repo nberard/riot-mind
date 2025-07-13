@@ -2,116 +2,395 @@
     "leagueId": "92eb2a08-25c7-42a4-8c9d-c56f18e7c346",
     "queueType": "RANKED_SOLO_5x5",
     "tier": "IRON",
-    "rank": "IV",
-    "summonerId": "E0JTt2y3OT-JFUWL8f3Yq4YvaohVb0sFC9j3sAvslSHYh3E",
+    "rank": "III",
     "puuid": "U24j2Os2QScUGZavBTv372sT8xakJ2qoaFRKwu9AG_4JZcZdS-kzz5idWBRK5N-ScHlg79Rxm8mrxA",
-    "leaguePoints": 29,
-    "wins": 287,
-    "losses": 383,
+    "leaguePoints": 13,
+    "wins": 298,
+    "losses": 392,
     "veteran": false,
     "inactive": false,
     "freshBlood": false,
     "hotStreak": false,
-    "history": [
-        {
-            "gameId": 7455900633,
-            "gameStartTimestamp": 1752006942990,
-            "platformId": "EUW1",
-            "gameType": "MATCHED_GAME",
-            "gameName": "teambuilder-match-7455900633",
-            "gameMode": "CLASSIC",
-            "endOfGameResult": "GameComplete",
-            "gameDuration": 1738,
-            "teams": [
-                {
-                    "teamId": 100,
-                    "win": false
-                },
-                {
-                    "teamId": 200,
-                    "win": true
-                }
-            ]
-        },
-        {
-            "gameId": 7455869187,
-            "gameStartTimestamp": 1752005851427,
-            "platformId": "EUW1",
-            "gameType": "MATCHED_GAME",
-            "gameName": "teambuilder-match-7455869187",
-            "gameMode": "CLASSIC",
-            "endOfGameResult": "GameComplete",
-            "gameDuration": 117,
-            "teams": [
-                {
-                    "teamId": 100,
-                    "win": true
-                },
-                {
-                    "teamId": 200,
-                    "win": false
-                }
-            ]
-        },
-        {
-            "gameId": 7455837739,
-            "gameStartTimestamp": 1752004357624,
-            "platformId": "EUW1",
-            "gameType": "MATCHED_GAME",
-            "gameName": "teambuilder-match-7455837739",
-            "gameMode": "CLASSIC",
-            "endOfGameResult": "GameComplete",
-            "gameDuration": 1077,
-            "teams": [
-                {
-                    "teamId": 100,
-                    "win": false
-                },
-                {
-                    "teamId": 200,
-                    "win": true
-                }
-            ]
-        },
-        {
-            "gameId": 7455784598,
-            "gameStartTimestamp": 1752001861994,
-            "platformId": "EUW1",
-            "gameType": "MATCHED_GAME",
-            "gameName": "teambuilder-match-7455784598",
-            "gameMode": "CLASSIC",
-            "endOfGameResult": "GameComplete",
-            "gameDuration": 1973,
-            "teams": [
-                {
-                    "teamId": 100,
-                    "win": false
-                },
-                {
-                    "teamId": 200,
-                    "win": true
-                }
-            ]
-        },
-        {
-            "gameId": 7455660518,
-            "gameStartTimestamp": 1751995803015,
-            "platformId": "EUW1",
-            "gameType": "MATCHED_GAME",
-            "gameName": "teambuilder-match-7455660518",
-            "gameMode": "CLASSIC",
-            "endOfGameResult": "GameComplete",
-            "gameDuration": 2184,
-            "teams": [
-                {
-                    "teamId": 100,
-                    "win": true
-                },
-                {
-                    "teamId": 200,
-                    "win": false
-                }
-            ]
+    "history": {
+        "games": [
+            {
+                "gameId": 7459787377,
+                "gameStartTimestamp": 1752368115889,
+                "platformId": "EUW1",
+                "gameType": "MATCHED_GAME",
+                "gameName": "teambuilder-match-7459787377",
+                "gameMode": "CLASSIC",
+                "endOfGameResult": "GameComplete",
+                "gameDuration": 2155,
+                "teams": [
+                    {
+                        "teamId": 100,
+                        "win": true,
+                        "myTeam": false
+                    },
+                    {
+                        "teamId": 200,
+                        "win": false,
+                        "myTeam": true
+                    }
+                ]
+            },
+            {
+                "gameId": 7459762160,
+                "gameStartTimestamp": 1752364545139,
+                "platformId": "EUW1",
+                "gameType": "MATCHED_GAME",
+                "gameName": "teambuilder-match-7459762160",
+                "gameMode": "CLASSIC",
+                "endOfGameResult": "GameComplete",
+                "gameDuration": 2160,
+                "teams": [
+                    {
+                        "teamId": 100,
+                        "win": true,
+                        "myTeam": true
+                    },
+                    {
+                        "teamId": 200,
+                        "win": false,
+                        "myTeam": false
+                    }
+                ]
+            },
+            {
+                "gameId": 7459692766,
+                "gameStartTimestamp": 1752359311145,
+                "platformId": "EUW1",
+                "gameType": "MATCHED_GAME",
+                "gameName": "teambuilder-match-7459692766",
+                "gameMode": "CLASSIC",
+                "endOfGameResult": "GameComplete",
+                "gameDuration": 1942,
+                "teams": [
+                    {
+                        "teamId": 100,
+                        "win": false,
+                        "myTeam": false
+                    },
+                    {
+                        "teamId": 200,
+                        "win": true,
+                        "myTeam": true
+                    }
+                ]
+            },
+            {
+                "gameId": 7459651711,
+                "gameStartTimestamp": 1752357068954,
+                "platformId": "EUW1",
+                "gameType": "MATCHED_GAME",
+                "gameName": "teambuilder-match-7459651711",
+                "gameMode": "CLASSIC",
+                "endOfGameResult": "GameComplete",
+                "gameDuration": 918,
+                "teams": [
+                    {
+                        "teamId": 100,
+                        "win": true,
+                        "myTeam": true
+                    },
+                    {
+                        "teamId": 200,
+                        "win": false,
+                        "myTeam": false
+                    }
+                ]
+            },
+            {
+                "gameId": 7459610282,
+                "gameStartTimestamp": 1752355211581,
+                "platformId": "EUW1",
+                "gameType": "MATCHED_GAME",
+                "gameName": "teambuilder-match-7459610282",
+                "gameMode": "CLASSIC",
+                "endOfGameResult": "GameComplete",
+                "gameDuration": 1453,
+                "teams": [
+                    {
+                        "teamId": 100,
+                        "win": true,
+                        "myTeam": false
+                    },
+                    {
+                        "teamId": 200,
+                        "win": false,
+                        "myTeam": true
+                    }
+                ]
+            },
+            {
+                "gameId": 7459138855,
+                "gameStartTimestamp": 1752327266194,
+                "platformId": "EUW1",
+                "gameType": "MATCHED_GAME",
+                "gameName": "teambuilder-match-7459138855",
+                "gameMode": "CLASSIC",
+                "endOfGameResult": "GameComplete",
+                "gameDuration": 2052,
+                "teams": [
+                    {
+                        "teamId": 100,
+                        "win": false,
+                        "myTeam": true
+                    },
+                    {
+                        "teamId": 200,
+                        "win": true,
+                        "myTeam": false
+                    }
+                ]
+            },
+            {
+                "gameId": 7459100782,
+                "gameStartTimestamp": 1752324427255,
+                "platformId": "EUW1",
+                "gameType": "MATCHED_GAME",
+                "gameName": "teambuilder-match-7459100782",
+                "gameMode": "CLASSIC",
+                "endOfGameResult": "GameComplete",
+                "gameDuration": 2204,
+                "teams": [
+                    {
+                        "teamId": 100,
+                        "win": true,
+                        "myTeam": true
+                    },
+                    {
+                        "teamId": 200,
+                        "win": false,
+                        "myTeam": false
+                    }
+                ]
+            },
+            {
+                "gameId": 7459072526,
+                "gameStartTimestamp": 1752322318740,
+                "platformId": "EUW1",
+                "gameType": "MATCHED_GAME",
+                "gameName": "teambuilder-match-7459072526",
+                "gameMode": "CLASSIC",
+                "endOfGameResult": "GameComplete",
+                "gameDuration": 1227,
+                "teams": [
+                    {
+                        "teamId": 100,
+                        "win": true,
+                        "myTeam": true
+                    },
+                    {
+                        "teamId": 200,
+                        "win": false,
+                        "myTeam": false
+                    }
+                ]
+            },
+            {
+                "gameId": 7459056416,
+                "gameStartTimestamp": 1752321775126,
+                "platformId": "EUW1",
+                "gameType": "MATCHED_GAME",
+                "gameName": "teambuilder-match-7459056416",
+                "gameMode": "CLASSIC",
+                "endOfGameResult": "GameComplete",
+                "gameDuration": 110,
+                "teams": [
+                    {
+                        "teamId": 100,
+                        "win": true,
+                        "myTeam": true
+                    },
+                    {
+                        "teamId": 200,
+                        "win": false,
+                        "myTeam": false
+                    }
+                ]
+            },
+            {
+                "gameId": 7459012602,
+                "gameStartTimestamp": 1752317514146,
+                "platformId": "EUW1",
+                "gameType": "MATCHED_GAME",
+                "gameName": "teambuilder-match-7459012602",
+                "gameMode": "CLASSIC",
+                "endOfGameResult": "GameComplete",
+                "gameDuration": 1991,
+                "teams": [
+                    {
+                        "teamId": 100,
+                        "win": false,
+                        "myTeam": false
+                    },
+                    {
+                        "teamId": 200,
+                        "win": true,
+                        "myTeam": true
+                    }
+                ]
+            },
+            {
+                "gameId": 7458809856,
+                "gameStartTimestamp": 1752278860394,
+                "platformId": "EUW1",
+                "gameType": "MATCHED_GAME",
+                "gameName": "teambuilder-match-7458809856",
+                "gameMode": "CLASSIC",
+                "endOfGameResult": "GameComplete",
+                "gameDuration": 2384,
+                "teams": [
+                    {
+                        "teamId": 100,
+                        "win": true,
+                        "myTeam": true
+                    },
+                    {
+                        "teamId": 200,
+                        "win": false,
+                        "myTeam": false
+                    }
+                ]
+            },
+            {
+                "gameId": 7458771893,
+                "gameStartTimestamp": 1752275557728,
+                "platformId": "EUW1",
+                "gameType": "MATCHED_GAME",
+                "gameName": "teambuilder-match-7458771893",
+                "gameMode": "CLASSIC",
+                "endOfGameResult": "GameComplete",
+                "gameDuration": 2885,
+                "teams": [
+                    {
+                        "teamId": 100,
+                        "win": false,
+                        "myTeam": true
+                    },
+                    {
+                        "teamId": 200,
+                        "win": true,
+                        "myTeam": false
+                    }
+                ]
+            },
+            {
+                "gameId": 7457891214,
+                "gameStartTimestamp": 1752193288267,
+                "platformId": "EUW1",
+                "gameType": "MATCHED_GAME",
+                "gameName": "teambuilder-match-7457891214",
+                "gameMode": "CLASSIC",
+                "endOfGameResult": "GameComplete",
+                "gameDuration": 1265,
+                "teams": [
+                    {
+                        "teamId": 100,
+                        "win": false,
+                        "myTeam": true
+                    },
+                    {
+                        "teamId": 200,
+                        "win": true,
+                        "myTeam": false
+                    }
+                ]
+            },
+            {
+                "gameId": 7457867653,
+                "gameStartTimestamp": 1752190157729,
+                "platformId": "EUW1",
+                "gameType": "MATCHED_GAME",
+                "gameName": "teambuilder-match-7457867653",
+                "gameMode": "CLASSIC",
+                "endOfGameResult": "GameComplete",
+                "gameDuration": 2382,
+                "teams": [
+                    {
+                        "teamId": 100,
+                        "win": false,
+                        "myTeam": false
+                    },
+                    {
+                        "teamId": 200,
+                        "win": true,
+                        "myTeam": true
+                    }
+                ]
+            },
+            {
+                "gameId": 7457812846,
+                "gameStartTimestamp": 1752186003956,
+                "platformId": "EUW1",
+                "gameType": "MATCHED_GAME",
+                "gameName": "teambuilder-match-7457812846",
+                "gameMode": "CLASSIC",
+                "endOfGameResult": "GameComplete",
+                "gameDuration": 1654,
+                "teams": [
+                    {
+                        "teamId": 100,
+                        "win": false,
+                        "myTeam": false
+                    },
+                    {
+                        "teamId": 200,
+                        "win": true,
+                        "myTeam": true
+                    }
+                ]
+            },
+            {
+                "gameId": 7457762396,
+                "gameStartTimestamp": 1752183327185,
+                "platformId": "EUW1",
+                "gameType": "MATCHED_GAME",
+                "gameName": "teambuilder-match-7457762396",
+                "gameMode": "CLASSIC",
+                "endOfGameResult": "GameComplete",
+                "gameDuration": 1876,
+                "teams": [
+                    {
+                        "teamId": 100,
+                        "win": false,
+                        "myTeam": true
+                    },
+                    {
+                        "teamId": 200,
+                        "win": true,
+                        "myTeam": false
+                    }
+                ]
+            },
+            {
+                "gameId": 7457747905,
+                "gameStartTimestamp": 1752182718856,
+                "platformId": "EUW1",
+                "gameType": "MATCHED_GAME",
+                "gameName": "teambuilder-match-7457747905",
+                "gameMode": "CLASSIC",
+                "endOfGameResult": "GameComplete",
+                "gameDuration": 123,
+                "teams": [
+                    {
+                        "teamId": 100,
+                        "win": false,
+                        "myTeam": true
+                    },
+                    {
+                        "teamId": 200,
+                        "win": true,
+                        "myTeam": false
+                    }
+                ]
+            }
+        ],
+        "summary": {
+            "wins": 10,
+            "losses": 7
         }
-    ]
+    }
 }
