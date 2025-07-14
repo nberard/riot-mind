@@ -9,6 +9,9 @@ with open(os.path.join(basedir, 'input_profile.json'), 'r') as fp:
     profile = json.loads(fp.read())
     with open(os.path.join(basedir, 'profile.template.html'), 'r') as pt:
         data: str = pt.read()
+        print(profile)
+        print(profile['history'])
+        print(profile['history']['summary'])
         res = data.format(rank=profile['tier'].lower(), name="Touplitoui", platform="EUW",
                           rankFull=profile['tier'] + " " + profile['rank'], gameNumber=4,
                           wins=profile['history']['summary']['wins'], losses=profile['history']['summary']['losses'],
