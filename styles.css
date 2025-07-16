@@ -16,7 +16,9 @@ body {
     background-color: #29206f;
     color: white;
 }
-
+.back-board {
+    background: #ffffff url("assets/background.jpg") center center/cover no-repeat;
+}
 h1 {
     text-align: center;
     color: green;
