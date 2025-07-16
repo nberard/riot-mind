@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+
+img {
+    height: 150px;
+}
+
+body {
+    font-family: 'Indie Flower', serif;
+    background-color: #29206f;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    color: green;
+    font-size: 2rem;
+    filter: drop-shadow(0px 0px 5px currentColor);
+
+}
+
+h2 {
+    color: green;
+    font-size: 1rem;
+}
+
