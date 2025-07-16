@@ -17,7 +17,7 @@ with open(os.path.join(basedir, 'input_profile.json'), 'r') as fp:
                             seasonWinrate=ceil((profile['wins'] / (profile['wins'] + profile['losses'])) * 100),
                           champion1='Zoe', nbKills=1, nbDeaths=1, nbAssists=1,kda=1, lp=profile['leaguePoints']
                           )
-        with open(os.path.join(basedir, 'output/res.html'), 'w') as rp:
+        with open(os.path.join(basedir, 'output/profile.html'), 'w') as rp:
             rp.write(res)
 
 
