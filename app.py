@@ -6,7 +6,9 @@ if not os.getenv('api_key'):
     exit('You must set an API key')
 api_key = os.getenv('api_key')
 import requests
-response = requests.get(f"https://europe.api.riotgames.com/riot/account/v1/accounts/by-riot-id/Touplitoui/euw?api_key={api_key}")
+
+response = requests.get(
+    f"https://europe.api.riotgames.com/riot/account/v1/accounts/by-riot-id/Touplitoui/euw?api_key={api_key}")
 response.raise_for_status()
 data = response.json()
 # print(data)
@@ -27,17 +29,18 @@ start_period = now_ts - (3600 * 7)
 print(now_ts)
 print(start_period)
 # exit()
-response = requests.get(f"https://europe.api.riotgames.com/lol/match/v5/matches/by-puuid/{puuid}/ids?startTime={now_ts - (3600 * 24 * 3)}&endTime={now_ts}&type=ranked&start=0&count=20&api_key={api_key}")
+response = requests.get(
+    f"https://europe.api.riotgames.com/lol/match/v5/matches/by-puuid/{puuid}/ids?startTime={now_ts - (3600 * 24 * 3)}&endTime={now_ts}&type=ranked&start=0&count=20&api_key={api_key}")
 response.raise_for_status()
 data = response.json()
 # print(data)
 all_profile['history'] = {
-        'games': [],
-        'summary': {
-            'wins': 0,
-            'losses': 0,
-        }
+    'games': [],
+    'summary': {
+        'wins': 0,
+        'losses': 0,
     }
+}
 for match in data[:20]:
     # print(match)
     response = requests.get(
@@ -45,7 +48,7 @@ for match in data[:20]:
     response.raise_for_status()
     data = response.json()
     # print(data)
-    print(data['info'].keys())
+    # print(data['info'].keys())
     game_info = {}
     game_info['gameId'] = data['info']['gameId']
     game_info['gameStartTimestamp'] = data['info']['gameStartTimestamp']
@@ -57,7 +60,7 @@ for match in data[:20]:
     game_info['gameDuration'] = data['info']['gameDuration']
     # game_info['participants'] = data ['info']['participants']
     myteam = None
-    for p in data ['info']['participants']:
+    for p in data['info']['participants']:
         if puuid == p['puuid']:
             myteam = p['teamId']
     game_info['teams'] = []
@@ -78,19 +81,17 @@ for match in data[:20]:
         'myTeam': data['info']['teams'][1]['teamId'] == myteam,
     })
     all_profile['history']['games'].append(game_info)
-    if (game_info['teams'][0]['win'] and game_info['teams'][0]['myTeam']) or (
-            game_info['teams'][1]['win'] and game_info['teams'][1]['myTeam']
-    ):
-        print('win')
+
+
+for match in all_profile['history']['games']:
+    if (match['teams'][0]['win'] and match['teams'][0]['myTeam']) or (match['teams'][1]['win'] and match['teams'][1]['myTeam']):
+        # print('win')
         all_profile['history']['summary']['wins'] += 1
     else:
-        print('loss')
+        # print('loss')
         all_profile['history']['summary']['losses'] += 1
 
+# https://europe.api.riotgames.com/lol/match/v5/matches/by-puuid/U24j2Os2QScUGZavBTv372sT8xakJ2qoaFRKwu9AG_4JZcZdS-kzz5idWBRK5N-ScHlg79Rxm8mrxA/ids?startTime=1751040301&endTime=1752045301&type=ranked&start=0&count=20&api_key=RGAPI-b531cd54-f50f-4a8c-8f1c-61cab1856836
+print(all_profile)
 with open(os.path.join(basedir, 'output', 'full_profile.json'), 'w') as f:
     f.write(json.dumps(all_profile, indent=4))
-
-# for match in all_profile['history']:
-
-
-# https://europe.api.riotgames.com/lol/match/v5/matches/by-puuid/U24j2Os2QScUGZavBTv372sT8xakJ2qoaFRKwu9AG_4JZcZdS-kzz5idWBRK5N-ScHlg79Rxm8mrxA/ids?startTime=1751040301&endTime=1752045301&type=ranked&start=0&count=20&api_key=RGAPI-b531cd54-f50f-4a8c-8f1c-61cab1856836
