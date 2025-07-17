@@ -15,6 +15,7 @@ body {
     font-family: 'Indie Flower', serif;
     /*background-color: #29206f;*/
     color: white;
+    margin: 0;
 }
 .back-board {
     background: #ffffff url("background.jpg") center center/cover no-repeat;
@@ -27,8 +28,16 @@ h1 {
 
 }
 
-h2 {
+.title {
     color: green;
     font-size: 1rem;
+}
+
+.rank {
+    color: darkblue;
+}
+
+.last-games {
+    display: inline;
 }
 
