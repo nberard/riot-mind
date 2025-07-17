@@ -37,7 +37,13 @@ h1 {
     color: darkblue;
 }
 
-.last-games {
+#last-games {
     display: inline;
+    float: right;
+}
+
+#summary {
+    display: inline;
+    float: left;
 }
 
