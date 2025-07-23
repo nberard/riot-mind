@@ -84,6 +84,7 @@ for match in data[:20]:
 
 
 for match in all_profile['history']['games']:
+    print(datetime.fromtimestamp(int(match['gameStartTimestamp']) / 1000))
     if (match['teams'][0]['win'] and match['teams'][0]['myTeam']) or (match['teams'][1]['win'] and match['teams'][1]['myTeam']):
         # print('win')
         all_profile['history']['summary']['wins'] += 1
